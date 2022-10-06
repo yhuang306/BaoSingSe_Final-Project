@@ -6,9 +6,14 @@
   width: 100%;
   height: 15vw;
   object-fit: cover;
+  border-image: green;
 }
 
 .menu-banner {
   max-width: 90%;
   max-width: 98%;
+}
+
+.center {
+  margin: 0 auto;
 }
