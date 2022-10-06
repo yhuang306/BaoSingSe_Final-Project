@@ -7,3 +7,8 @@
   height: 15vw;
   object-fit: cover;
 }
+
+.menu-banner {
+  max-width: 90%;
+  max-width: 98%;
+}
