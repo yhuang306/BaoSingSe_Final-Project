@@ -25,6 +25,10 @@
   overflow: hidden;
 }
 
+.mainBody:hover {
+  cursor: pointer;
+}
+
 .swaping, .swaping2, .swaping3, .swaping4, .swaping5, .swaping6{
   width: 200%;
   height: 100%;
