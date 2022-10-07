@@ -45,7 +45,7 @@ function swapingImg5() {
     swap5.style.marginLeft = "0%";
 }
 
-function swapingTex6() {
+function swapingText6() {
     swap6.style.marginLeft = "-100%";
 }
 
