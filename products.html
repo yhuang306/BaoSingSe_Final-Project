@@ -18,7 +18,7 @@
     <title>BaoSingSe_Final-Project</title>
   </head>
   <body>
-    <head>
+    <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-success">
         <img src="./img/logo.png" alt="logo" width="100" height="100" />
         <button
@@ -57,131 +57,210 @@
           </ul>
         </div>
       </nav>
-    </head>
-
-    <br />
-    <header>
       <img
         src="/img/menubanner.png"
         class="menu-banner d-flex align-items-center"
       />
+      <nav class="navbar mr-auto ml-auto">
+        <div class="container-fluid justify-content-center">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
     </header>
-    <div class="row row-cols-1 row-cols-md-3 g-4 p-5">
-      <div class="col">
-        <div class="card border-success h-100 text-center">
-          <div class="card-header bg-success">Beef Bao</div>
-          <img
-            src="img/bao-beef-bun.jpeg"
-            class="card-img-top"
-            alt="Fluffy white steamed bun with beef filling"
-          />
-          <div class="card-body d-flex flex-column">
-            <p class="card-text">
-              Flavorful beef pot roast, mixed with spinach, green onions, and
-              marinated in hoisin sauce, wrapped in a soft fluffy bun
-            </p>
-            <br />
-            <p>$3</p>
-            <a href="#" class="btn btn-secondary mt-auto">Add to cart</a>
+
+    <div class="card col-lg-4 col-sm-12 col-md-6 my-5 border-light">
+      <div class="card-header bg-success text-center font-weight-bold">
+        Beef Bao
+      </div>
+      <div class="card-body">
+        <div class="mainBody">
+          <div class="swaping">
+            <a onclick="swapingText()" class="swaping-img">
+              <div class="card bg-light text-white">
+                <img class="card-img col-12" src="./img/bao-beef-bun.jpeg" alt="Card image">
+              </div>
+            </a>
+            <a onclick="swapingImg()" class="swaping-text" >
+              <div class="card bg-dark text-white">
+                <img class="card-img col-12" src="./img/bao-beef-bun.jpeg" alt="Card image">
+                <div class="card-img-overlay">
+                  <p class="card-text text-center">
+                    Flavorful beef pot roast, mixed with spinach, green onions, and
+                    marinated in hoisin sauce, wrapped in a soft fluffy bun
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card border-success h-100 text-center">
-          <div class="card-header bg-success">Chicken Bao</div>
-          <img
-            src="img/steamed-chicken-buns4.png"
-            class="card-img-top"
-            alt="Fluffy white steamed bun with chicken filling"
-          />
-          <div class="card-body d-flex flex-column">
-            <p class="card-text">
-              Ground chicken mixed with green onions, grated ginder, and white
-              pepper marinated in oyster sauce, soy suace, and sesame oil
-              Wrapped in a soft fluffy bun
-            </p>
-            <br />
-            <p>$3</p>
-            <a href="#" class="btn btn-secondary mt-auto">Add to cart</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card border-success h-100 text-center">
-          <div class="card-header bg-success">Pickled Cabbage Bao</div>
-          <img
-            src="img/veggie-buns.jpeg"
-            class="card-img-top"
-            alt="3 steamed white buns"
-          />
-          <div class="card-body d-flex flex-column">
-            <p class="card-text">
-              Cabbage marinated in rice vinegar, mixed with garlic, red chili
-              pepper.
-            </p>
-            <br />
-            <br />
-            <p>$3</p>
-            <a href="#" class="btn btn-secondary mt-auto">Add to Cart</a>
-          </div>
-        </div>
+      <div class="card-text text-center">
+        <label ><strong>Price: $3</strong></label>
+        <input type="number" name="beef" id="beef">
+        <a href="#" class="btn btn-secondary mt-auto">Add to cart</a>
       </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4 p-5">
-      <div class="col">
-        <div class="card border-success h-100 text-center">
-          <div class="card-header bg-success">Egg Custard Bao</div>
-          <img
-            src="img/eggcustard.jpeg"
-            class="card-img-top"
-            alt="Fluffy white steamed bun with beef filling"
-          />
-          <div class="card-body d-flex flex-column">
-            <p class="card-text">Egg custard filling steamed bun</p>
-            <br />
-            <br />
-            <p>$3</p>
-            <a href="#" class="btn btn-secondary mt-auto">Add to cart</a>
+    <div class="card col-lg-4 col-sm-12 col-md-6 my-5 border-light">
+      <div class="card-header bg-success text-center font-weight-bold">
+        Chicken Bao
+      </div>
+      <div class="card-body">
+        <div class="mainBody">
+          <div class="swaping2">
+            <a onclick="swapingText2()" class="swaping-img2">
+              <div class="card bg-light text-white">
+                <img class="card-img col-12" src="./img/steamed-chicken-buns4.png" alt="Card image">
+              </div>
+            </a>
+            <a onclick="swapingImg2()" class="swaping-text2" >
+              <div class="card bg-dark text-white">
+                <img class="card-img col-12" src="./img/steamed-chicken-buns4.png" alt="Card image">
+                <div class="card-img-overlay">
+                  <p class="card-text text-center">
+                    Ground chicken mixed with green onions, grated ginder, and white
+                    pepper marinated in oyster sauce, soy suace, and sesame oil
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card border-success h-100 text-center">
-          <div class="card-header bg-success">Red Bean Bao</div>
-          <img
-            src="img/redbean.jpeg"
-            class="card-img-top"
-            alt="Fluffy white steamed bun with chicken filling"
-          />
-          <div class="card-body d-flex flex-column">
-            <p class="card-text">
-              A fluffy, soft bun filled with smooth, sweet red bean paste
-            </p>
-            <br />
-            <p>$3</p>
-            <a href="#" class="btn btn-secondary mt-auto">Add to cart</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card border-success h-100 text-center">
-          <div class="card-header bg-success">Nutella Bao</div>
-          <img
-            src="img/nutellabun.jpeg"
-            class="card-img-top"
-            alt="3 steamed white buns"
-          />
-          <div class="card-body d-flex flex-column">
-            <p class="card-text">Nutella cream stuffed fluffy steamed bun</p>
-            <br />
-            <br />
-            <p>$3</p>
-            <a href="#" class="btn btn-secondary mt-auto">Add to Cart</a>
-          </div>
-        </div>
+      <div class="card-text text-center">
+        <label ><strong>Price: $3</strong></label>
+        <input type="number" name="beef" id="beef">
+        <a href="#" class="btn btn-secondary mt-auto">Add to cart</a>
       </div>
     </div>
+
+    <div class="card col-lg-4 col-sm-12 col-md-6 my-5 border-light">
+      <div class="card-header bg-success text-center font-weight-bold">
+        Pickled Cabbage Bao
+      </div>
+      <div class="card-body">
+        <div class="mainBody">
+          <div class="swaping3">
+            <a onclick="swapingText3()" class="swaping-img3">
+              <div class="card bg-light text-white">
+                <img class="card-img col-12" src="./img/veggie-buns.jpeg" alt="Card image">
+              </div>
+            </a>
+            <a onclick="swapingImg3()" class="swaping-text3" >
+              <div class="card bg-dark text-white">
+                <img class="card-img col-12" src="./img/veggie-buns.jpeg" alt="Card image">
+                <div class="card-img-overlay">
+                  <p class="card-text text-center">
+                    Cabbage marinated in rice vinegar, mixed with garlic, red chili pepper.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card-text text-center">
+        <label ><strong>Price: $3</strong></label>
+        <input type="number" name="beef" id="beef">
+        <a href="#" class="btn btn-secondary mt-auto">Add to cart</a>
+      </div>
+    </div> 
+        
+    <div class="card col-lg-4 col-sm-12 col-md-6 border-light">
+      <div class="card-header bg-success text-center font-weight-bold">
+          Egg Custard Bao
+        </div>
+        <div class="card-body">
+            <div class="mainBody">
+                <div class="swaping4">
+                    <a onclick="swapingText4()" class="swaping-img4">
+                        <div class="card bg-light text-white">
+                            <img class="card-img col-12" src="./img/eggcustard.jpeg" alt="Card image">
+                        </div>
+                    </a>
+                    <a onclick="swapingImg4()" class="swaping-text4" >
+                        <div class="card bg-dark text-white">
+                            <img class="card-img col-12" src="./img/eggcustard.jpeg" alt="Card image">
+                            <div class="card-img-overlay">
+                                <p class="card-text text-center">Egg custard filling steamed bun</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-text text-center">
+          <label ><strong>Price: $3</strong></label>
+          <input type="number" name="beef" id="beef">
+          <a href="#" class="btn btn-secondary mt-auto">Add to cart</a>
+        </div>
+    </div>
+    <div class="card col-lg-4 col-sm-12 col-md-6 border-light">
+      <div class="card-header bg-success text-center font-weight-bold">
+          Red Bean Bao
+        </div>
+        <div class="card-body">
+            <div class="mainBody">
+                <div class="swaping5">
+                    <a onclick="swapingText5()" class="swaping-img5">
+                        <div class="card bg-light text-white">
+                            <img class="card-img col-12" src="./img/redbean.jpeg" alt="Card image">
+                        </div>
+                    </a>
+                    <a onclick="swapingImg5()" class="swaping-text5" >
+                        <div class="card bg-dark text-white">
+                            <img class="card-img col-12" src="./img/redbean.jpeg" alt="Card image">
+                            <div class="card-img-overlay">
+                                <p class="card-text text-center">A fluffy, soft bun filled with smooth, sweet red bean paste</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-text text-center">
+          <label ><strong>Price: $3</strong></label>
+          <input type="number" name="beef" id="beef">
+          <a href="#" class="btn btn-secondary mt-auto">Add to cart</a>
+        </div>
+    </div>
+    <div class="card col-lg-4 col-sm-12 col-md-6 border-light">
+      <div class="card-header bg-success text-center font-weight-bold">
+        Nutella Bao
+      </div>
+      <div class="card-body">
+          <div class="mainBody">
+              <div class="swaping6">
+                  <a onclick="swapingText6()" class="swaping-img6">
+                      <div class="card bg-light text-white">
+                          <img class="card-img col-12" src="./img/nutellabun.jpeg" alt="Card image">
+                      </div>
+                  </a>
+                  <a onclick="swapingImg6()" class="swaping-text6" >
+                      <div class="card bg-dark text-white">
+                          <img class="card-img col-12" src="./img/nutellabun.jpeg" alt="Card image">
+                          <div class="card-img-overlay">
+                              <p class="card-text text-center">Nutella cream stuffed fluffy steamed bun</p>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="card-text text-center">
+        <label ><strong>Price: $3</strong></label>
+        <input type="number" name="beef" id="beef">
+        <a href="#" class="btn btn-secondary mt-auto">Add to cart</a>
+      </div>
+  </div>
 
     <footer class="text-center">
       <p>Copyright &copy; 2022</p>
@@ -202,5 +281,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="./styles.js"></script>
   </body>
 </html>
