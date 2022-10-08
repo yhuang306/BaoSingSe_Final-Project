@@ -17,3 +17,36 @@
 .center {
   margin: 0 auto;
 }
+
+.mainBody{
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow: hidden;
+}
+
+.mainBody:hover {
+  cursor: pointer;
+}
+
+.swaping, .swaping2, .swaping3, .swaping4, .swaping5, .swaping6{
+  width: 200%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swaping-img, .swaping-text, .swaping-img2, .swaping-text2, .swaping-img3, .swaping-text3, .swaping-img4, .swaping-text4, .swaping-img5, .swaping-text5, .swaping-img6, .swaping-text6 {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.swaping-text img, .swaping-text2 img, .swaping-text3 img, .swaping-text4 img, .swaping-text5 img, .swaping-text6 img{
+  opacity: 0.2;
+}
+
+.product-card {
+  float: left;
+  border: none;
+}
+
