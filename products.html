@@ -74,21 +74,21 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
   </header>
-    <div class="card product-card col-lg-4 col-sm-12 col-md-6 mb-5 border-light">
+<!--     <div class="card product-card col-lg-4 col-sm-12 col-md-6 mb-5 border-light">
       <div class="card-header bg-success text-center font-weight-bold">
         Beef Bao
       </div>
       <div class="card-body">
         <div class="mainBody">
           <div class="swaping">
-            <a onclick="swapingText()" class="swaping-img" title="Click for detail">
+            <a id="swapingText" class="swaping-img" title="Click for detail">
               <div class="card bg-light text-white">
                 <img class="card-img col-12" src="./img/bao-beef-bun.jpeg" alt="Card image">
               </div>
             </a>
-            <a onclick="swapingImg()" class="swaping-text" title="Click for image">
+            <a class="swaping-text" title="Click for image">
               <div class="card bg-dark text-white">
-                <img class="card-img col-12" src="./img/bao-beef-bun.jpeg" alt="Card image">
+                <img id="swapingImg" class="card-img col-12" src="./img/bao-beef-bun.jpeg" alt="Card image">
                 <div class="card-img-overlay">
                   <p class="card-text text-center">
                     Flavorful beef pot roast, mixed with spinach, green onions, and
@@ -114,12 +114,12 @@
       <div class="card-body">
         <div class="mainBody">
           <div class="swaping2">
-            <a onclick="swapingText2()" class="swaping-img2" title="Click for detail">
+            <a id="swapingText2" class="swaping-img2" title="Click for detail">
               <div class="card bg-light text-white">
                 <img class="card-img col-12" src="./img/steamed-chicken-buns4.png" alt="Card image">
               </div>
             </a>
-            <a onclick="swapingImg2()" class="swaping-text2" title="Click for image">
+            <a id="swapingImg2" class="swaping-text2" title="Click for image">
               <div class="card bg-dark text-white">
                 <img class="card-img col-12" src="./img/steamed-chicken-buns4.png" alt="Card image">
                 <div class="card-img-overlay">
@@ -147,12 +147,12 @@
       <div class="card-body">
         <div class="mainBody">
           <div class="swaping3">
-            <a onclick="swapingText3()" class="swaping-img3" title="Click for detail">
+            <a id="swapingText" class="swaping-img3" title="Click for detail">
               <div class="card bg-light text-white">
                 <img class="card-img col-12" src="./img/veggie-buns.jpeg" alt="Card image">
               </div>
             </a>
-            <a onclick="swapingImg3()" class="swaping-text3" title="Click for image">
+            <a id="swapingImg" class="swaping-text3" title="Click for image">
               <div class="card bg-dark text-white">
                 <img class="card-img col-12" src="./img/veggie-buns.jpeg" alt="Card image">
                 <div class="card-img-overlay">
@@ -258,10 +258,73 @@
         <input type="number" name="beef" min="0" id="beef">
         <a href="#" class="btn btn-secondary mt-auto">Add to cart</a>
       </div>
-    </div>
+    </div> -->
 
+        <div class="container">  
+              <div class="flip-card col-sm-12 col-lg-4 col-md-6 float-left">
+                <div class="flip-card-inner"> 
+                <div class="flip-card-front"> 
+                  <img src="./img/bao-beef-bun.jpeg" alt="beef" style="width: 100%;height:300px;">
+                </div> 
+                <div class="flip-card-back"> 
+                  <h1>Beef Bao</h1>
+                  <p>Flavorful beef pot roast, mixed with spinach, green onions, and
+                    marinated in hoisin sauce, wrapped in a soft fluffy bun</p>
+                    <label><strong>Price: $3</strong></label><br>
+                    <input type="number" name="beef" size="1" min="0" id="beef"> <br>
+                    <a href="#" class="btn btn-secondary mt-2">Add to cart</a>
+                </div>
+              </div> 
+            </div>
+              
+              <div class="flip-card col-sm-12 col-lg-4 col-md-6 float-left">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="./img/bao-beef-bun.jpeg" alt="beef" style="width: 100%;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                  <h1>Beef Bao</h1>
+                  <p>Flavorful beef pot roast, mixed with spinach, green onions, and
+                    marinated in hoisin sauce, wrapped in a soft fluffy bun</p>
+                    <label><strong>Price: $3</strong></label><br>
+                    <input type="number" name="beef" size="1" min="0" id="beef"> <br>
+                    <a href="#" class="btn btn-secondary mt-2">Add to cart</a>
+                </div>
+              </div>
+            </div> 
     
-
+              <div class="flip-card col-sm-12 col-lg-4 col-md-6 float-left">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="./img/bao-beef-bun.jpeg" alt="beef" style="width:100%;height:300px;">
+                </div>
+                <div class="flip-card-back"> 
+                  <h1>Beef Bao</h1>
+                  <p>Flavorful beef pot roast, mixed with spinach, green onions, and
+                    marinated in hoisin sauce, wrapped in a soft fluffy bun</p>
+                    <label><strong>Price: $3</strong></label><br>
+                    <input type="number" name="beef" size="1" min="0" id="beef"> <br>
+                    <a href="#" class="btn btn-secondary mt-2">Add to cart</a>
+                </div>
+              </div>
+            </div> 
+            <div class="flip-card col-sm-12 col-lg-4 col-md-6 float-left">
+              <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="./img/bao-beef-bun.jpeg" alt="beef" style="width:100%;height:300px;">
+              </div>
+              <div class="flip-card-back"> 
+                <h1>Beef Bao</h1>
+                <p>Flavorful beef pot roast, mixed with spinach, green onions, and
+                  marinated in hoisin sauce, wrapped in a soft fluffy bun</p>
+                  <label><strong>Price: $3</strong></label><br>
+                  <input type="number" name="beef" size="1" min="0" id="beef"> <br>
+                  <a href="#" class="btn btn-secondary mt-2">Add to cart</a>
+              </div>
+            </div>
+          </div> 
+            </div>
+  
     <footer class="text-center">
       <p>Copyright &copy; 2022</p>
     </footer>
