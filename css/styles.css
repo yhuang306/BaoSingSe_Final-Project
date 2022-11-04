@@ -69,7 +69,7 @@ input {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: #549760;
   color: white;
   transform: rotateY(180deg);
 }

@@ -16,4 +16,12 @@ class ProductsController {
     // Push the item to the items property
     this.items.push(product);
   }
+
+  loadItemsFromLocalStorage() {
+    const storageItems = localStorage.getItem("items")
+    if (storageItems) {
+        const items = JSON.parse(storageItems)
+        //TODO load the items into the local items structure (this.items)           
+    }
+}
 }
