@@ -23,55 +23,54 @@
   margin: 0 auto;
 }
 
-.mainBody {
+
+
+.flip-card {
+  background-color: transparent;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+
+input {
+  width: 100px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
   width: 100%;
   height: 100%;
-  border: none;
-  overflow: hidden;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.mainBody:hover {
-  cursor: pointer;
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.swaping,
-.swaping2,
-.swaping3,
-.swaping4,
-.swaping5,
-.swaping6 {
-  width: 200%;
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
   height: 100%;
-  overflow: hidden;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 }
 
-.swaping-img,
-.swaping-text,
-.swaping-img2,
-.swaping-text2,
-.swaping-img3,
-.swaping-text3,
-.swaping-img4,
-.swaping-text4,
-.swaping-img5,
-.swaping-text5,
-.swaping-img6,
-.swaping-text6 {
-  width: 50%;
-  height: 100%;
-  float: left;
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
 }
 
-.swaping-text img,
-.swaping-text2 img,
-.swaping-text3 img,
-.swaping-text4 img,
-.swaping-text5 img,
-.swaping-text6 img {
-  opacity: 0.2;
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }
 
-.product-card {
-  float: left;
-  border: none;
-}
