@@ -11,10 +11,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/form.css">
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+  
     <title>BaoSingSe_Final-Project</title>
   </head>
   <body>
@@ -60,13 +62,13 @@
     </header>
 
     <img
-      src="/img/WelcomeBanner.png"
+      src="./img/WelcomeBanner.png"
       class="menu-banner d-flex align-items-center"
       height="250"
       width="100%"
     />
 <div>    
-    <div class="card border-success align-items-center w-50 p-5 mb-3" style="w-50; align-items: center;">
+<!--     <div class="card border-success align-items-center w-50 p-5 mb-3" style="w-50 align-items: center;">
      
 
     <div class="mb-3">
@@ -107,8 +109,14 @@
     </div>
     <br>
     <button type="button" class="btn btn-success">Add Item to Catolog</button>
-  </div>
-
+  </div> -->
+  <form>
+    <input type="text" name="itemName" id="itemName" placeholder="Item Name" required><br><br>
+    <textarea name="itemDescription" id="itemDescription" cols="30" rows="5" placeholder="Add item descriptions" required></textarea><br><br>
+    <input type="text" name="itemPrice" id="itemPrice" placeholder="Price" required><br><br>
+    <input type="file" id="fileName" name="fileName" accept="image/png, image/jpeg">
+    
+  </form>
 
     <footer class="text-center">
       <p>Copyright &copy; 2022</p>

@@ -39,4 +39,17 @@ const sampleProducts = [
     'imageUrl': './img/eggcustard.jpeg'
   },
 ];
+
+ 
 localStorage.setItem("products", JSON.stringify(sampleProducts));
+
+function loadListFromProductsController() {
+  for(let i = 0; i < productsController.products.length; i++) {
+    const product = productsController.products[i];
+    addProductCard(product);
+  }
+}
+
+productsController.loadIProductsFromLocalStorage();
+loadListFromProductsController();
+
