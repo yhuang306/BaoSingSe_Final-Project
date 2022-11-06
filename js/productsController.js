@@ -15,6 +15,7 @@ class ProductsController {
     };
     // Push the item to the items property
     this.products.push(product);
+    //return product;
   }
 
   loadProductsFromLocalStorage() {
