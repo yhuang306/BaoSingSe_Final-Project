@@ -4,7 +4,7 @@ function addProductCard(product){
     const productHTML = `<div class="flip-card col-sm-12 col-lg-4 col-md-6 float-left">\n
     <div class="flip-card-inner"> \n
     <div class="flip-card-front">\n 
-      <img src="${product.imageUrl}" alt="product image" style="width: 100%;height:300px;">\n
+      <img src="${product.imageUrl}" alt="product image" style="width: 100%; height: 300px;">\n
     </div> \n
     <div class="flip-card-back"> \n
       <h1>${product.name}</h1>\n
@@ -59,8 +59,8 @@ loadListFromProductsController();
   const description = document.getElementById('itemDescription');
   const price = document.getElementById('itemPrice');
   const image = document.getElementById('customFileLang');
-  let pro = productsController.addProduct(name.value, description.value, price.value, image.value);
-  addProductCard(pro);
+  productsController.addProduct(name.value, description.value, price.value, image.value);
+  addProductCard(productsController.products[0]);
   const lastAddedItem = document.getElementById('lastAddedItem');
   lastAddedItem.innerHTML = `${pro.id} ${pro.name} ${pro.description} ${pro.price}`;
 }
