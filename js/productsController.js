@@ -15,10 +15,12 @@ class ProductsController {
     };
     // Push the item to the items property
     this.products.push(product);
-    //return product;
+    //   return product;
+
+    localStorage.setItem("products", JSON.stringify(this.products));
   }
 
-  loadProductsFromLocalStorage() {
+/*   loadProductsFromLocalStorage() {
     const storageProducts = localStorage.getItem("products");
     if (storageProducts) {
         const products = JSON.parse(storageProducts)
@@ -26,7 +28,9 @@ class ProductsController {
         for(let i = 0; i < products.length; i++){
           const product = products[i];
           this.products.push(product);
+
+          
         }
     }
-  }
+  } */
 }
