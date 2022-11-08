@@ -15,10 +15,10 @@ function addProductCard(product){
     </div>\n
   </div> \n
 </div>\n`;
-const productsContainer = document.getElementById('list-products');
-productsContainer.innerHTML += productHTML;
-/* const lastAddedItem = document.getElementById('lastAddedItem');
-lastAddedItem.innerHTML += productHTML; */
+/* const productsContainer = document.getElementById('list-products');
+productsContainer.innerHTML += productHTML; */
+const lastAddedItem = document.getElementById('lastAddedItem');
+lastAddedItem.innerHTML += productHTML;
 }
 
 const sampleProducts = [
@@ -52,7 +52,7 @@ function loadListFromProductsController() {
   }
 }
 
-productsController.loadIProductsFromLocalStorage();
+//productsController.loadProductsFromLocalStorage();
 loadListFromProductsController();
 /* function eventHandler() {
   const name = document.getElementById('itemName');

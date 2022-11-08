@@ -27,7 +27,7 @@ newItemForm.addEventListener('submit', (event) => {
 
     // Add the item to the ItemsController
     productsController.addProduct(name, description, price, imageUrl);
-
+    addProductCard(productsController.products[productsController.products.length-1]);
     // Clear the form
     newItemName.value = '';
     newItemDescription.value = '';    

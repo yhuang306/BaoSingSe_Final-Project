@@ -1,36 +1,20 @@
 class ProductsController {
-  // Set up the items and currentId property in the contructor
+  //set up constructor with id = 0 and an empty array
   constructor(currentId = 0) {
-    this.products = [];
-    this.currentId = currentId;
+      this.products = [];
+      this.currentId = currentId;
   }
-  // Create the addProduct method
+
   addProduct(name, description, price, imageUrl) {
-    const product = {
-      id: this.currentId++,
-      name: name,
-      description: description,
-      price: price,
-      imageUrl: imageUrl,
-    };
-    // Push the item to the items property
-    this.products.push(product);
-    //   return product;
+      const product = {
+          id: this.currentId++,
+          name: name,
+          description: description,
+          price: price,
+          imageUrl: imageUrl
+      };
 
-    localStorage.setItem("products", JSON.stringify(this.products));
+      //push the product to the products array
+      this.products.push(product);
   }
-
-/*   loadProductsFromLocalStorage() {
-    const storageProducts = localStorage.getItem("products");
-    if (storageProducts) {
-        const products = JSON.parse(storageProducts)
-        //TODO load the items into the local items structure (this.items) 
-        for(let i = 0; i < products.length; i++){
-          const product = products[i];
-          this.products.push(product);
-
-          
-        }
-    }
-  } */
 }
