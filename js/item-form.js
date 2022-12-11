@@ -1,3 +1,4 @@
+const productsController = new productsController(0);
 // Select the New Item Form
 const newItemForm = document.getElementById("newProductForm");
 
@@ -30,4 +31,5 @@ newItemForm.addEventListener("submit", (event) => {
   // Clear the form
   newItemName.value = "";
   newItemDescription.value = "";
+  imageUrl.value = "";
 });
