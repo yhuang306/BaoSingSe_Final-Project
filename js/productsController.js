@@ -1,13 +1,17 @@
 class ProductsController {
   //set up constructor with id = 0 and an empty array
   constructor(currentId = 0) {
-    this.products = [];
-    this.currentId = currentId;
+    this._products = [];
+    this._currentId = currentId;
+  }
+
+  get product() {
+    return this._products;
   }
 
   addProduct(name, description, price, imageUrl) {
     const product = {
-      id: this.currentId++,
+      id: ++this.currentId,
       name: name,
       description: description,
       price: price,
@@ -16,15 +20,16 @@ class ProductsController {
 
     //push the product to the products array
     this.products.push(product);
+    localStorage.setItem("products", JSON.stringify(this._products));
   }
   loadItemsFromLocalStorageToArray() {
     const storageItems = localStorage.getItem("products");
     if (storageItems) {
       const products = JSON.parse(storageItems);
-      for (let i = 0, size = products.length; i < size; i++) {
-        const product = products[i];
-        this.products.push(product);
-      }
+      // for (let i = 0, size = products.length; i < size; i++) {
+      //   const product = products[i];
+      //   this.products.push(product);
+      // }
     }
   }
 }
