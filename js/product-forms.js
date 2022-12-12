@@ -1,6 +1,6 @@
 
 // Initialize a new ItemsController with currentId set to 0
-const productsController = new ProductsController(0);
+const productsController = new ProductsController();
 
 // Select the New Item Form
 const newProductForm = document.querySelector('#newProductForm');
@@ -19,8 +19,11 @@ newProductForm.addEventListener('submit', (event) => {
     // Get the values of the inputs
     const name = newProductName.value;
     const description = newProductDescription.value;
-    const imageUrl = newProductImageUrl.value;
+    const imageUrl1 = newProductImageUrl.files[0].name;
     const price = newProductPrice.value;
+
+    const imageUrl = "./img/" + imageUrl1;
+    
 
     /*
         Validation code here

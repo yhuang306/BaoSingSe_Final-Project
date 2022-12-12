@@ -26,6 +26,7 @@ function loadStorageSampleData() {
   if (!localStorage.getItem("products")) {
     const sampleProducts = [
       {
+        id: 1,
         name: "Beef Bao",
         description:
           "Flavorful beef pot roast, mixed with spinach, green onions, and marinated in hoisin sauce, wrapped in a soft fluffy bun",
@@ -33,6 +34,7 @@ function loadStorageSampleData() {
         imageUrl: "./img/bao-beef-bun.jpeg",
       },
       {
+        id: 2,
         name: "Chicken Bao",
         description:
           "Ground chicken mixed with green onions, grated ginder, and white pepper marinated in oyster sauce, soy suace, and sesame oil",
@@ -40,6 +42,7 @@ function loadStorageSampleData() {
         imageUrl: "./img/steamed-chicken-buns4.png",
       },
       {
+        id: 3,
         name: "Egg Custard Bao",
         description: "Egg custard filling steamed bun",
         price: "3",
