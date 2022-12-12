@@ -17,18 +17,28 @@ class ProductsController {
       //push the product to the products array
       this.products.push(product);
 
-      localStorage.setItem("products", JSON.stringify(this.products));
+      //localStorage.setItem("products", JSON.stringify(this.products));
   }
 
-  /* loadProductsFromLocalStorage() {
-      const storageProducts = localStorage.getItem("products");
-      if (storageProducts) {
-          const products = JSON.parse(storageProducts)
-          //TODO load the items into the local items structure (this.items) 
-          for(let i = 0; i < products.length; i++){
-          const product = products[i];
-          this.products.push(product);
-          }
-      }
-  }  */
+  saveProductToLocalStorage() {
+    if(!localStorage.getItem("products")) {
+        localStorage.setItem("products", JSON.stringify(this.products));
+    } else {
+        const oldLocalStorage = JSON.parse(localStorage.getItem('products'))
+        oldLocalStorage.push(this.products[this.products.length - 1])
+        localStorage.setItem("products", JSON.stringify(oldLocalStorage))
+    }
+}
+
+loadProductsFromLocalStorage() {
+    const storageProducts = localStorage.getItem("products");
+    if (storageProducts) {
+        const products = JSON.parse(storageProducts)
+        //TODO load the items into the local items structure (this.items) 
+        for(let i = 0; i < products.length; i++){
+        const product = products[i];
+        this.products.push(product);
+        }
+    }
+} 
 }

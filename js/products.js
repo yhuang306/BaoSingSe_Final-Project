@@ -1,4 +1,4 @@
-const productsController = new ProductsController();
+//const productsController = new ProductsController();
 
 function addProductCard(product) {
   const productHTML =
@@ -58,7 +58,7 @@ function loadCardsListFromProductsController() {
 }
 
 loadStorageSampleData();
-//productsController.loadProductsFromLocalStorage();
+productsController.loadProductsFromLocalStorage();
 loadCardsListFromProductsController();
 
 
