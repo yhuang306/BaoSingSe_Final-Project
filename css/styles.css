@@ -23,7 +23,9 @@
   margin: 0 auto;
 }
 
-
+#footer {
+  clear: both;
+}
 
 .flip-card {
   background-color: transparent;
