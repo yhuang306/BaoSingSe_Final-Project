@@ -1,11 +1,12 @@
+
+
 class ProductsController {
 
     products = []
   //set up constructor with id = 0 and an empty array
   constructor() {
-    loadProductsFromLocalStorage();
-    console.log(this.products.length);
-      this.currentId = 0;
+    let localStorageArray = JSON.parse(window.localStorage.getItem("products"));
+    this.currentId = localStorageArray.length;
   }
 
  
