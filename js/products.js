@@ -1,8 +1,7 @@
 //const productsController = new ProductsController();
 
 function addProductCard(product) {
-  const productHTML =
-  `<div class="flip-card col-sm-12 col-lg-4 col-md-6 float-left">\n
+  const productHTML = `<div class="flip-card col-sm-12 col-lg-4 col-md-6 float-left">\n
   <div class="flip-card-inner"> \n
       <div class="flip-card-front">\n 
           <img src="${product.imageUrl}" alt="product image" style="width: 100%; height: 300px;">\n
@@ -19,7 +18,7 @@ function addProductCard(product) {
   /* const productsContainer = document.getElementById("list-products");
   productsContainer.innerHTML += productHTML; */
   const lastAddedItem = document.getElementById("lastAddedItem");
-  lastAddedItem.innerHTML += productHTML; 
+  lastAddedItem.innerHTML += productHTML;
 }
 
 function loadStorageSampleData() {
@@ -50,27 +49,25 @@ function loadStorageSampleData() {
       },
     ];
     localStorage.setItem("products", JSON.stringify(sampleProducts));
-
   }
 }
 
 function loadCardsListFromProductsController() {
-  for(let i = 0, size = productsController.products.length; i < size; i++) {
-      const product = productsController.products[i];
-      addProductCard(product);
+  for (let i = 0, size = productsController.products.length; i < size; i++) {
+    const product = productsController.products[i];
+    addProductCard(product);
   }
 }
 
 function loadLastCardsListFromProductsController() {
-  
-  addProductCard(productsController.products[productsController.products.length - 1]);
-  
+  addProductCard(
+    productsController.products[productsController.products.length - 1]
+  );
 }
 
 loadStorageSampleData();
 productsController.loadProductsFromLocalStorage();
 loadCardsListFromProductsController();
-
 
 /*  let itemName = document.getElementById('itemName');
 let description = document.getElementById('itemDescription');
