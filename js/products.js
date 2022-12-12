@@ -16,10 +16,10 @@ function addProductCard(product) {
       </div>\n
   </div> \n
 </div>\n`;
-  // const productsContainer = document.getElementById("list-products");
-  // productsContainer.innerHTML += productHTML;
+  /* const productsContainer = document.getElementById("list-products");
+  productsContainer.innerHTML += productHTML; */
   const lastAddedItem = document.getElementById("lastAddedItem");
-  lastAddedItem.innerHTML += productHTML;
+  lastAddedItem.innerHTML += productHTML; 
 }
 
 function loadStorageSampleData() {
@@ -46,7 +46,7 @@ function loadStorageSampleData() {
         imageUrl: "./img/eggcustard.jpeg",
       },
     ];
-    localStorage.setProduct("products", JSON.stringify(sampleProducts));
+    localStorage.setItem("products", JSON.stringify(sampleProducts));
   }
 }
 
@@ -55,6 +55,12 @@ function loadCardsListFromProductsController() {
       const product = productsController.products[i];
       addProductCard(product);
   }
+}
+
+function loadLastCardsListFromProductsController() {
+  
+  addProductCard(productsController.products[productsController.products.length - 1]);
+  
 }
 
 loadStorageSampleData();

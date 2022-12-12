@@ -1,6 +1,6 @@
 
 // Initialize a new ItemsController with currentId set to 0
-const productsController = new ProductsController();
+const productsController = new ProductsController(0);
 
 // Select the New Item Form
 const newProductForm = document.querySelector('#newProductForm');
@@ -29,6 +29,7 @@ newProductForm.addEventListener('submit', (event) => {
     // Add the item to the ItemsController
     productsController.addProduct(name, description, price, imageUrl);
     productsController.saveProductToLocalStorage();
+    loadLastCardsListFromProductsController();
     //addProductCard(productsController.products[0]);
 
     // Clear the form
