@@ -1,53 +1,34 @@
 class ProductsController {
   //set up constructor with id = 0 and an empty array
   constructor(currentId = 0) {
-    this.products = [];
-    this.currentId = currentId;
+      this.products = [];
+      this.currentId = currentId;
   }
-
-  // get product() {
-  //   return this._products;
-  // }
 
   addProduct(name, description, price, imageUrl) {
-    // if (this._products.length !== 0) {
-    //   this.currentId = this._products.length;
-    // }
-    const product = {
-      id: this.currentId++,
-      name: name,
-      description: description,
-      price: price,
-      imageUrl: imageUrl,
-    };
+      const product = {
+          id: this.currentId++,
+          name: name,
+          description: description,
+          price: price,
+          imageUrl: imageUrl
+      };
 
-    //push the product to the products array
-    this.products.push(product);
+      //push the product to the products array
+      this.products.push(product);
 
-    //Save items to local storage
-    localStorage.setProduct("products", JSON.stringify(this.products));
+      localStorage.setItem("products", JSON.stringify(this.products));
   }
-  // loadItemsFromLocalStorageToArray() {
-  //   const storageItems = localStorage.getItem("products");
-  //   if (storageItems) {
-  //     const products = JSON.parse(storageItems);
-  //     for (let i = 0, size = products.length; i < size; i++) {
-  //       const product = products[i];
-  //       this._products.push(product);
-  //     }
-  //   }
-  // }
+
+  /* loadProductsFromLocalStorage() {
+      const storageProducts = localStorage.getItem("products");
+      if (storageProducts) {
+          const products = JSON.parse(storageProducts)
+          //TODO load the items into the local items structure (this.items) 
+          for(let i = 0; i < products.length; i++){
+          const product = products[i];
+          this.products.push(product);
+          }
+      }
+  }  */
 }
-
-// Save items to the local Storage
-
-// function saveItemToLocalStorage() {
-//   if (!localStorage.getItem("products")) {
-//     localStorage.setItem("products", JSON.stringify(this._products));
-//     // save to database
-//   } else {
-//     const oldLocalStorage = JSON.parse(localStorage.getItem("products"));
-//     oldLocalStorage.push(this._products[this._products.length - 1]);
-//     localStorage.setItem("products", JSON.stringify(oldLocalStorage));
-//   }
-// }
