@@ -50,6 +50,7 @@ function loadStorageSampleData() {
       },
     ];
     localStorage.setItem("products", JSON.stringify(sampleProducts));
+
   }
 }
 
